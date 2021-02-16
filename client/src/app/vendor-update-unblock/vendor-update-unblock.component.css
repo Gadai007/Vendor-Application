@@ -1,0 +1,21 @@
+label{
+    font-size: 14px !important;
+    font-weight: 600 !important;
+}
+input,select{
+    height: 25px !important;
+    padding:2px !important;
+    
+}
+input[type="text"]
+{
+    font-size:13px !important;
+}
+select
+{
+    font-size:13px !important;
+}
+input[type="file"]
+{
+    font-size:13px !important;
+}

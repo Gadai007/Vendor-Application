@@ -1,0 +1,378 @@
+<div class="row">
+    <!-- Left col -->
+    <section class="col-lg-12 connectedSortable">
+      <!-- Custom tabs (Charts with tabs)-->
+      <div class="card">
+        <div class="card-header">
+          <h3 class="card-title">
+            <!-- <i class="fas fa-chart-pie mr-1"></i> -->
+            Vendor Registration Form
+          </h3>
+        
+        </div><!-- /.card-header -->
+        <div class="card-body">
+          <div class="tab-content p-0">
+            <!-- Morris chart - Sales -->
+            <div class="chart tab-pane active" id="revenue-chart"
+                 style="position: relative;">
+                 <mat-horizontal-stepper>
+                    <mat-step label="Initial Request">
+                        <!-- <p>Intial Request</p> -->
+                        <div>
+                            <mat-horizontal-stepper>
+                                <mat-step label="General Information">
+                                    <hr>
+                                    <span class="text-danger floa">General Information</span>
+                                    <hr>
+                                    <form #general_info>
+                                        <div class="row">
+                                            <div class="col-md-4">
+                                                <label>Supplier Local Name  </label>
+                                                <input type="text"  class="form-control" name="supplier_local_name" />
+                                            </div>
+                                            <div class="col-md-4">
+                                                <label>Supplier Name (Legal Name) <span class="text-danger">*</span></label>
+                                                <input type="text"  class="form-control" name="supplier_name" />
+                                            </div>
+                                            <div class="col-md-4">
+                                                <label>Supplier Cotact Person (Full Name) <span class="text-danger">*</span></label>
+                                                <input type="text"  class="form-control" name="supplier_name" />
+                                            </div>
+                                        </div>
+                                        <hr>
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <button mat-button matStepperNext class="btn btn-success float-right">Next</button>
+                                             </div>
+                                        </div>
+                                    </form>
+                                </mat-step>
+                                <mat-step label="Contact Information">
+                                    <hr>
+                                    <span class="text-danger">Contact Information</span>
+                                    <hr>
+                                    <form #contact_info>
+                                        <div class="row">
+                                            <div class="col-md-4">
+                                                <label>Supplier Contact Email <span class="text-danger">*</span> </label>
+                                                <input type="email"  class="form-control" name="supplier_contact_email" />
+                                            </div>
+                                            <div class="col-md-4">
+                                                <label>Supplier Contact No. <span class="text-danger">*</span></label>
+                                                <input type="text"  class="form-control" name="supplier_contact_no" />
+                                            </div>
+                                            <div class="col-md-4">
+                                                <label>Supplier Fax No. </label>
+                                                <input type="text"  class="form-control" name="supplier_fax_no" />
+                                            </div>
+                                        </div>
+                                        <hr>
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <label>Address</label>
+                                             </div>
+                                        </div>
+                                        <div class="row mt-1">
+                                            <div class="col-md-3">
+                                                <label>House No.</label>
+                                                <input type="text" ngModel name="house_no" class="form-control"/>
+                                                
+                                            </div>
+                                            <div class="col-md-3">
+                                                <label>Street <span class="text-danger">*</span></label>
+                                                <input type="text" ngModel name="street_name" class="form-control"/>
+                                            </div>
+                                            <div class="col-md-3">
+                                                <label>Locality </label>
+                                                <input type="text" ngModel name="locality" class="form-control"/>
+                                            </div>
+                                            <div class="col-md-3">
+                                                <label>Near By </label>
+                                                <input type="text" ngModel name="near_by" class="form-control"/>
+                                            </div>
+                                        </div>
+                                        <div class="row mt-1">
+                                            <div class="col-md-3">
+                                                <label>City</label>
+                                                <input type="text" ngModel name="city_" class="form-control"/>
+                                                
+                                            </div>
+                                            <div class="col-md-3">
+                                                <label>Postal Code <span class="text-danger">*</span></label>
+                                                <input type="text" ngModel name="postal_code" class="form-control"/>
+                                            </div>
+                                            <div class="col-md-3">
+                                                <label>Country </label>
+                                                <select class="form-control" ngModel name="country_">
+                                                    <option>Select</option>
+                                                </select>
+                                            </div>
+                                            <div class="col-md-3">
+                                                <label>Region</label>
+                                                <input type="text" ngModel name="region_" class="form-control"/>
+                                            </div>
+                                        </div>
+                                        <hr>
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <button mat-button matStepperPrevious class="btn btn-warning float-left">Back</button>
+                                                <button mat-button matStepperNext class="btn btn-success float-right">Next</button>
+                                             </div>
+                                        </div>
+                                    </form>
+                                </mat-step>
+                                <mat-step label="Tax Information">
+                                    <hr>
+                                    <span class="text-danger">Tax Information</span>
+                                    <hr>
+                                    <form #tax_info>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <label>Please choose Tax ID Type <span class="text-danger">*</span> </label>
+                                                <select class="form-control" name="tax_id_type">
+                                                </select>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <label>Supplier Tax ID Number  <span class="text-danger">*</span></label>
+                                                <input type="text"  class="form-control" name="supplier_tax_id_no" />
+                                            </div>
+                                        </div>
+                                        
+                                    
+                                        <hr>
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <button mat-button matStepperPrevious class="btn btn-warning float-left">Back</button>
+                                                <button mat-button matStepperNext class="btn btn-success float-right">Next</button>
+                                             </div>
+                                        </div>
+                                    </form>
+                                </mat-step>
+                                <mat-step label="Payment and Banking Information">
+                                    <hr>
+                                    <span class="text-danger">Payment And Banking Information</span>
+                                    <hr>
+                                    <form #pay_bank_info>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <label>Prime currency for this account. <span class="text-danger">*</span> </label>
+                                                <select class="form-control" name="currency_">
+                                                </select>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <label>Legal Company Name  <span class="text-danger">*</span></label>
+                                                <input type="text"  class="form-control" name="legal_company_name" />
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-3">
+                                                <label>Benificiary Address </label>
+                                                <input type="text"  class="form-control" name="benificiary_address" />
+                                            </div>
+                                            <div class="col-md-3">
+                                                <label>Bank Account Name <span class="text-danger">*</span></label>
+                                                <input type="text"  class="form-control" name="bank_account_name" />
+                                            </div>
+                                            <div class="col-md-3">
+                                                <label>Bank Account Number <span class="text-danger">*</span></label>
+                                                <input type="text"  class="form-control" name="bank_account_number" />
+                                            </div>
+                                            <div class="col-md-3">
+                                                <label>IBAN -if available </label>
+                                                <input type="text"  class="form-control" name="iban_" />
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-3">
+                                                <label>Bank Name </label>
+                                                <input type="text"  class="form-control" name="bank_name" />
+                                            </div>
+                                            <div class="col-md-3">
+                                                <label>Bank Number(Bank Code + Branch Code) </label>
+                                                <input type="text"  class="form-control" name="bank_branch_code" />
+                                            </div>
+                                           
+                                            <div class="col-md-3">
+                                                <label>Branch Name </label>
+                                                <input type="text"  class="form-control" name="branch_name" />
+                                            </div>
+                                            <div class="col-md-3">
+                                                <label>Bank Address</label>
+                                                <input type="text"  class="form-control" name="bank_address" />
+                                            </div>
+                                           
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <label>Bank SWIFT Code (BIC) <span class="text-danger">*</span></label>
+                                                <input type="text"  class="form-control" name="bank_swift_code" />
+                                            </div>
+                                            <div class="col-md-6">
+                                                <label>Bank Local Routing Code (ABA, Sort, Transit, etc.) <span class="text-danger">*</span></label>
+                                                <input type="text"  class="form-control" name="bank_routing_code" />
+                                            </div>
+                                        </div>
+                                        <hr>
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <button mat-button matStepperPrevious class="btn btn-warning float-left">Back</button>
+                                                <button mat-button matStepperNext class="btn btn-success float-right">Next</button>
+                                             </div>
+                                        </div>
+                                    </form>
+                                </mat-step>
+                                <mat-step label="Anti Corruption">
+                                    <hr>
+                                    <span class="text-danger">Anti Corruption</span>
+                                    <hr>
+                                    <form #anti_corruption>
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <label>Are you a Government official or entity,or owned by a Government official or entity? Or do you perform services for the company that may require interaction with a government entity or official? <span class="text-danger"> * </span></label>
+                                               <input type="radio" name="govt_official" value="Yes"/> Yes
+                                               <input type="radio" name="govt_official" value="No"/> No
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <label>Do you expect to do business with sub-contractors? <span class="text-danger"> * </span> </label><br>
+                                               <input type="radio" name="do_business_with_sbu_contractor" value="Yes"/> Yes
+                                               <input type="radio" name="do_business_with_sbu_contractor" value="No"/> No
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <label>Are you shipping products across country border(s) ?  <span class="text-danger"> * </span> </label><br>
+                                               <input type="radio" name="shipping_across_country_border" value="Yes"/> Yes
+                                               <input type="radio" name="shipping_across_country_border" value="No"/> No
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <label>Do you act directly or indirectly for on behalf of any individual or entity that appears on the Specially Designed Nationals and Blocked person list, as maintained by the office of Foreign Assets Control of the US department of the Treasury or is otherwise subjected to OFAC sanctions.  <span class="text-danger"> * </span> </label><br>
+                                               <input type="radio" name="special_designated" value="Yes"/> Yes
+                                               <input type="radio" name="special_designated" value="No"/> No
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <label>Do you have any relationship with are you aware of any other company relationships on anything else that may create any conflict of interest or otherwise call into question that our relationship is other than a standard independent third party relationship? <span class="text-danger"> * </span> </label><br>
+                                               <input type="radio" name="third_party_relationship" value="Yes"/> Yes
+                                               <input type="radio" name="third_party_relationship" value="No"/> No
+                                            </div>
+                                        </div>
+                                        <hr>
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <button mat-button matStepperPrevious class="btn btn-warning float-left">Back</button>
+                                                <button mat-button matStepperNext class="btn btn-success float-right">Next</button>
+                                             </div>
+                                        </div>
+                                    </form>
+                                </mat-step>
+                                <mat-step label="Data Privacy">
+                                    <hr>
+                                    <span class="text-danger">Data Privacy</span>
+                                    <hr>
+                                    <form #data_privacy>
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <label>Will your company have access to the personal information of company's employees and /or customers ?Examples of personal information include name , address , phone number ,email address, date of birth , employee information typically maintained in an HRIs, customer information typically maintained in a CRM system,etc.<span class="text-danger"> * </span></label>
+                                                <input type="radio" name="data_privacy" value="Yes"/> Yes
+                                                <input type="radio" name="data_privacy" value="No"/> No
+                                            </div>
+                                        </div>
+                                        <hr>
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <button mat-button matStepperPrevious class="btn btn-warning float-left">Back</button>
+                                                <button mat-button matStepperNext class="btn btn-success float-right">Next</button>
+                                             </div>
+                                        </div>
+                                    </form>
+                                </mat-step>
+                                <mat-step label="Cyber Security">
+                                    <hr>
+                                    <span class="text-danger">Cyber Security</span>
+                                    <hr>
+                                    <form #cyber_security>
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <label>In providing the service, will you have access to any company's employee or customer information ,company's internal or confidential information- either via data sent by company to you or your company processing/storing/hosting company data on your systems?<span class="text-danger"> * </span></label>
+                                                <input type="radio" name="cyber_security" value="Yes"/> Yes
+                                                <input type="radio" name="cyber_security" value="No"/> No
+                                            </div>
+                                        </div>
+                                        <hr>
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <button mat-button matStepperPrevious class="btn btn-warning float-left">Back</button>
+                                                <button mat-button matStepperNext class="btn btn-success float-right">Next</button>
+                                             </div>
+                                        </div>
+                                    </form>
+                                </mat-step>
+                                <mat-step label="Supplier Acknowledgement">
+                                    <hr>
+                                    <span class="text-danger">Supplier Acknowledgement</span>
+                                    <hr>
+                                    <form #supplier_acknw>
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <label>In providing the service, will you have access to any company's employee or customer information ,Company's internal or confidential information- either via data sent by company to you or your company processing/storing/hosting company data on your systems?<span class="text-danger"> * </span></label>
+                                                <input type="radio" name="supplier_acknw" value="Yes"/> Yes
+                                                <input type="radio" name="supplier_acknw" value="No"/> No
+                                            </div>
+                                        </div>
+                                        <hr>
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <button mat-button matStepperPrevious class="btn btn-warning float-left">Back</button>
+                                                <button  class="btn btn-danger float-right">Update</button>
+                                             </div>
+                                        </div>
+                                    </form>
+                                </mat-step>
+                            </mat-horizontal-stepper>
+                        </div>
+                    </mat-step>
+                    <mat-step label="Approval for Supplier Registration [EIM Approval]">
+                        <p>Approval for Supplier Registration [EIM Approval]</p>
+                    </mat-step>
+                    <mat-step label="Vendor Registration">
+                        <p>Vendor Registration</p>
+                    </mat-step>
+                    <mat-step label="Approved">
+                        <p>Approved</p>
+                    </mat-step>
+                    <mat-step label="Completed">
+                        <p>Completed</p>
+                    </mat-step>
+                </mat-horizontal-stepper>
+             </div>
+          
+          </div>
+        </div><!-- /.card-body -->
+      </div>
+      <!-- /.card -->
+
+    
+
+    </section>
+    <!-- /.Left col -->
+    <!-- right col (We are only adding the ID to make the widgets sortable)-->
+  
+    <!-- right col -->
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+

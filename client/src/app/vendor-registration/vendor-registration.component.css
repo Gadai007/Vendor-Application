@@ -1,0 +1,12 @@
+.mat-step-header.cdk-keyboard-focused, .mat-step-header.cdk-program-focused, .mat-step-header:hover {
+    background-color: rgb(218 204 248 / 48%) !important;
+}
+label{
+    font-size: 14px !important;
+    font-weight: 400 !important;
+}
+input,select{
+    height: 25px !important;
+    padding:2px !important;
+    
+}

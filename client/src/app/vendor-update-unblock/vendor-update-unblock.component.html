@@ -1,0 +1,111 @@
+<div class="row">
+    <!-- Left col -->
+    <section class="col-lg-12 connectedSortable">
+      <!-- Custom tabs (Charts with tabs)-->
+      <div class="card">
+        <div class="card-header">
+          <h3 class="card-title">
+            <!-- <i class="fas fa-chart-pie mr-1"></i> -->
+             Vendor Unblock Request Form
+          </h3>
+        
+        </div><!-- /.card-header -->
+        <div class="card-body">
+          <div class="tab-content p-0">
+            <!-- Morris chart - Sales -->
+            <div class="chart tab-pane active" id="revenue-chart"
+                 style="position: relative;">
+                <!-- <canvas id="revenue-chart-canvas" height="300" style="height: 300px;"></canvas> -->
+                <form #vendor_request="ngForm" >
+                   
+                    <div class="row mt-1">
+                        <div class="col-md-4">
+                            <label>Vendor Number</label>
+                            <input type="text" name="vendor_no" ngModel class="form-control"/>
+                        </div>
+                        <div class="col-md-4">
+                            <label>Vendor Name</label>
+                            <input type="text" name="vendor_name" ngModel class="form-control"/>
+                        </div>
+                        <div class="col-md-4">
+                            <label>Reason For Unblock:</label>
+                            <input type="text" name="vendr_blokc_reason" ngModel class="form-control"/>
+                        </div>
+                    </div>
+                    
+                    <hr>
+                    <div class="row mt-1">
+                        <div class="col-md-12">
+                            <label>Supplier Address </label>                       
+                        </div>
+                    </div>
+                    <div class="row mt-1">
+                        <div class="col-md-3">
+                            <label>House No.</label>
+                            <input type="text" ngModel name="house_no" class="form-control"/>
+                            
+                        </div>
+                        <div class="col-md-3">
+                            <label>Street <span class="text-danger">*</span></label>
+                            <input type="text" ngModel name="street_name" class="form-control"/>
+                        </div>
+                        <div class="col-md-3">
+                            <label>Line 2 </label>
+                            <input type="text" ngModel name="locality" class="form-control"/>
+                        </div>
+                        <div class="col-md-3">
+                            <label>Line 3 </label>
+                            <input type="text" ngModel name="near_by" class="form-control"/>
+                        </div>
+                    </div>
+                    <div class="row mt-1">
+                        <div class="col-md-3">
+                            <label>City</label>
+                            <input type="text" ngModel name="city_" class="form-control"/>
+                            
+                        </div>
+                        <div class="col-md-3">
+                            <label>Postal Code <span class="text-danger">*</span></label>
+                            <input type="text" ngModel name="postal_code" class="form-control"/>
+                        </div>
+                        <div class="col-md-3">
+                            <label>Country </label>
+                            <select class="form-control" ngModel name="country_">
+                                <option>Select</option>
+                            </select>
+                        </div>
+                        <div class="col-md-3">
+                            <label>Region</label>
+                            <input type="text" ngModel name="region_" class="form-control"/>
+                        </div>
+                    </div>
+                   <div class="row">
+                    <div class="col-md-12">
+                        <label>Supporting Documents</label>
+                        <br>
+                        <input type="file" ngModel name="supp_doc" />
+                    </div>
+                   </div>
+                    <hr>
+                    <div class="row mt-1">
+                        <div class="col-md-12">
+                            <Button class="btn btn-success float-right">Unblock</Button> 
+                            <!-- <input type="button" class="btn btn-success float-right" value="Submit Request" />                 -->
+                        </div>
+                    </div>
+                </form>
+             </div>
+          
+          </div>
+        </div><!-- /.card-body -->
+      </div>
+      <!-- /.card -->
+
+    
+
+    </section>
+    <!-- /.Left col -->
+    <!-- right col (We are only adding the ID to make the widgets sortable)-->
+  
+    <!-- right col -->
+  </div>

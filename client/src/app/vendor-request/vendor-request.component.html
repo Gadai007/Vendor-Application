@@ -1,0 +1,233 @@
+<div class="row">
+    <!-- Left col -->
+    <section class="col-lg-12 connectedSortable">
+      <!-- Custom tabs (Charts with tabs)-->
+      <div class="card">
+        <div class="card-header">
+          <h3 class="card-title">
+            <!-- <i class="fas fa-chart-pie mr-1"></i> -->
+            Vendor Request Form
+          </h3>
+        
+        </div><!-- /.card-header -->
+        <div class="card-body">
+          <div class="tab-content p-0">
+            <!-- Morris chart - Sales -->
+            <div class="chart tab-pane active" id="revenue-chart"
+                 style="position: relative;">
+                <!-- <canvas id="revenue-chart-canvas" height="300" style="height: 300px;"></canvas> -->
+                <form #vendor_request="ngForm" (ngSubmit)="getUserRequestDeatils(vendor_request.value)">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <label>Supplier Type</label>
+                            <select class="form-control" ngModel name="supplier_type">
+                                <option>Select</option>
+                                
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row mt-1">
+                        <div class="col-md-10">
+                            <label style="font-size: 1em;">Is this projected spend with the supplier over 50,000 dollars?This can either be a one time purchase or throughout the business relationship. <span class="text-danger">*</span></label>
+                        </div>
+                        <div class="col-md-2">
+                            <select class="form-control" ngModel name="supplier_spend">
+                                <option>Select</option>
+                                <option>Yes</option>
+                                <option>No</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row mt-1">
+                        <div class="col-md-10">
+                            <label style="font-size: 1em;">Is this supplier setup for a one-time payment <span class="text-danger">*</span></label>
+                        </div>
+                        <div class="col-md-2">
+                            <select class="form-control" ngModel name="supplier_one_time">
+                                <option>Select</option>
+                                <option>Yes</option>
+                                <option>No</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row mt-1">
+                        <div class="col-md-4">
+                            <label>Enter company code(s) for the supplier <span class="text-danger">*</span></label>
+                            <input type="text" ngModel name="company_code" class="form-control"/>
+                        </div>
+                        <div class="col-md-4">
+                            <label>Legal Supplier Local Name</label>
+                            <select class="form-control" ngModel name="supplier_local_name">
+                                <option>Select</option>
+                            </select>
+                        </div>
+                        <div class="col-md-4">
+                            <label>Legal Supplier Name</label>
+                            <select class="form-control" ngModel name="supplier_name">
+                                <option>Select</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row mt-1">
+                        <div class="col-md-4">
+                            <label>Supplier Contact Person <span class="text-danger">*</span></label>
+                            <input type="text" ngModel name="supplier_contact_person" class="form-control"/>
+                        </div>
+                        <div class="col-md-4">
+                            <label>Supplier Contact Email <span class="text-danger">*</span></label>
+                            <input type="email" ngModel name="supplier_contact_email" class="form-control"/>
+                        </div>
+                        <div class="col-md-4">
+                            <label>Supplier Contact Phone Number <span class="text-danger">*</span></label>
+                            <input type="text" ngModel name="supplier_contact_number" class="form-control"/>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="row mt-1">
+                        <div class="col-md-12">
+                            <label>Supplier Address </label>                       
+                        </div>
+                    </div>
+                    <div class="row mt-1">
+                        <div class="col-md-3">
+                            <label>House No.</label>
+                            <input type="text" ngModel name="house_no" class="form-control"/>
+                            
+                        </div>
+                        <div class="col-md-3">
+                            <label>Street <span class="text-danger">*</span></label>
+                            <input type="text" ngModel name="street_name" class="form-control"/>
+                        </div>
+                        <div class="col-md-3">
+                            <label>Locality </label>
+                            <input type="text" ngModel name="locality" class="form-control"/>
+                        </div>
+                        <div class="col-md-3">
+                            <label>Near By </label>
+                            <input type="text" ngModel name="near_by" class="form-control"/>
+                        </div>
+                    </div>
+                    <div class="row mt-1">
+                        <div class="col-md-3">
+                            <label>City</label>
+                            <input type="text" ngModel name="city_" class="form-control"/>
+                            
+                        </div>
+                        <div class="col-md-3">
+                            <label>Postal Code <span class="text-danger">*</span></label>
+                            <input type="text" ngModel name="postal_code" class="form-control"/>
+                        </div>
+                        <div class="col-md-3">
+                            <label>Country </label>
+                            <select class="form-control" ngModel name="country_">
+                                <option>Select</option>
+                            </select>
+                        </div>
+                        <div class="col-md-3">
+                            <label>Region</label>
+                            <input type="text" ngModel name="region_" class="form-control"/>
+                        </div>
+                    </div>
+                    <div class="row mt-1">
+                        <div class="col-md-6">
+                            <label>Please provide the Supplier Bank Details (only pdf files) <span class="text-danger">*</span></label>
+                            <input type="file" ngModel name="supplier_bank_details" class=""/>
+                        </div>
+                        <div class="col-md-6">
+                            <label>Please provide a copy of an Invoice to perform Verification (only pdf files) <span class="text-danger">*</span></label>
+                            <input type="file" ngModel name="copy_of_invoice" class=""/>
+                        </div>
+                    </div>
+                    <div class="row mt-1">
+                        <div class="col-md-3">
+                            <label>Tax ID Type <span class="text-danger">*</span></label>
+                            <select class="form-control" ngModel name="tax_id_type">
+                                <option>Select</option>
+                            </select>
+                        </div>
+                        <div class="col-md-3">
+                            <label>Supplier Tax ID Number <span class="text-danger">*</span></label>
+                            <input type="text" ngModel name="tax_id_name" class="form-control"/>
+                        </div>
+                        <div class="col-md-3">
+                            <label>Supplier Industry  <span class="text-danger">*</span></label>
+                            <select class="form-control" ngModel name="supplier_industry">
+                                <option>Select</option>
+                            </select>
+                        </div>
+                        <div class="col-md-3">
+                            <label>Reason for this Supplier Setup <span class="text-danger">*</span></label>
+                            <input type="text" ngModel name="reason_for_setup" class="form-control"/>
+                        </div>
+                    </div>
+                    <div class="row mt-1">
+                        <div class="col-md-3">
+                            <label>Has this supplier requested payment in the form of check? <span class="text-danger">*</span></label>
+                            <select ngModel name="supplier_requested_payment" class="form-control">
+                                <option>Select</option>
+                                <option value="1">Yes</option>
+                                <option vale="0">No</option>
+                            </select>
+                        </div>
+                        <div class="col-md-2">
+                            <label>Did the supplier agree to the payment terms? <span class="text-danger">*</span></label>
+                            <select ngModel name="agree_to_payment_terms" class="form-control">
+                                <option>Select</option>
+                                <option value="1">Yes</option>
+                                <option vale="0">No</option>
+                            </select>
+                        </div>
+                        <div class="col-md-3">
+                            <label>Do you have any relationship with supplier?  <span class="text-danger">*</span></label>
+                            <select ngModel name="relationship_with_supplier" class="form-control">
+                                <option>Select</option>
+                                <option value="1">Yes</option>
+                                <option vale="0">No</option>
+                            </select>
+                        </div>
+                        <div class="col-md-2">
+                            <label>Will the good/services be consumed in the US <span class="text-danger">*</span></label>
+                            <select ngModel name="consumed_in_us" class="form-control">
+                                <option>Select</option>
+                                <option value="1">Yes</option>
+                                <option vale="0">No</option>
+                            </select>
+                        </div>
+                        <div class="col-md-2">
+                            <label>Is this a US based Supplier <span class="text-danger">*</span></label>
+                            <select ngModel name="us_based_supplier" class="form-control">
+                                <option>Select</option>
+                                <option value="1">Yes</option>
+                                <option vale="0">No</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row mt-1">
+                        <div class="col-md-12">
+                            <label>Additional Documents (if any / only pdf files)</label>       
+                            <input ngModel name="additional_doc" type="file" />                
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="row mt-1">
+                        <div class="col-md-12">
+                            <Button class="btn btn-success float-right">Submit Request</Button> 
+                            <!-- <input type="button" class="btn btn-success float-right" value="Submit Request" />                 -->
+                        </div>
+                    </div>
+                </form>
+             </div>
+          
+          </div>
+        </div><!-- /.card-body -->
+      </div>
+      <!-- /.card -->
+
+    
+
+    </section>
+    <!-- /.Left col -->
+    <!-- right col (We are only adding the ID to make the widgets sortable)-->
+  
+    <!-- right col -->
+  </div>
